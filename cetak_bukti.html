@@ -126,6 +126,12 @@
         document.getElementById('pdf-kelas').innerText = urlParams.get('kelas') || '-';
         document.getElementById('pdf-status').innerText = urlParams.get('status') || '-';
         document.getElementById('pdf-verify').innerText += urlParams.get('nis') || '000';
+        
+        function bukaHalamanCetak(nama, nis, kelas, status) {
+    // Memanggil file cetak_bukti.html yang berada di folder yang sama
+    const url = `cetak_bukti.html?nama=${encodeURIComponent(nama)}&nis=${encodeURIComponent(nis)}&kelas=${encodeURIComponent(kelas)}&status=${encodeURIComponent(status)}`;
+    window.location.href = url;
+}
     </script>
 </body>
 </html>
