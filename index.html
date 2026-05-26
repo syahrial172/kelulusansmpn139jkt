@@ -35,7 +35,7 @@
                     <i class="fa-solid fa-users text-3xl"></i>
                 </div>
                 <div>
-                    <p class="text-sm opacity-80 uppercase tracking-wider font-semibold">Total Peserta Ujian</p>
+                    <p class="text-sm opacity-80 uppercase tracking-wider font-semibold">Total Peserta Didik - TP. 2025/2026</p>
                     <h3 id="stat-total" class="text-3xl font-bold mt-1">⏳</h3>
                 </div>
             </div>
@@ -43,20 +43,20 @@
                 <div class="p-4 bg-white/20 rounded-xl">
                     <i class="fa-solid fa-graduation-cap text-3xl"></i>
                 </div>
-                <div>
+               <!-- <div>
                     <p class="text-sm opacity-80 uppercase tracking-wider font-semibold">Dinyatakan Lulus</p>
                     <h3 id="stat-lulus" class="text-3xl font-bold mt-1">⏳</h3>
-                </div>
+                </div> --->
             </div>
             <div class="bg-gradient-to-br from-purple-500 to-purple-700 p-6 rounded-2xl text-white shadow-xl flex items-center space-x-4">
                 <div class="p-4 bg-white/20 rounded-xl">
                     <i class="fa-solid fa-chart-pie text-3xl"></i>
                 </div>
-                <div>
+               <!-- <div>
                     <p class="text-sm opacity-80 uppercase tracking-wider font-semibold">Persentase Kelulusan</p>
                     <h3 id="stat-persen" class="text-3xl font-bold mt-1">⏳</h3>
                 </div>
-            </div>
+            </div> --->
         </section>
 
         <section class="max-w-xl mx-auto bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-slate-100 text-center animate__animated animate__fadeInUp">
@@ -119,7 +119,7 @@
         function hitungStatistik() {
             const total = dataSiswa.length;
             const lulus = dataSiswa.filter(s => s.Status.toUpperCase() === 'LULUS').length;
-            const persen = total > 0 ? ((lulus / total) * 100).toFixed(1) : 0;
+            // const persen = total > 0 ? ((lulus / total) * 100).toFixed(1) : 0;
 
             document.getElementById('stat-total').innerText = total + " Siswa";
             document.getElementById('stat-lulus').innerText = lulus + " Siswa";
